@@ -6,5 +6,7 @@
 </script>
 
 
-<h1>Hello and welcome to my site</h1>
-<a href="/about">About my site</a>
+<h1>Hello and welcome to my portfolio</h1>
+<p> this site is currently a WIP, (obviously) but feel free to look around <br>
+I'll be updating it pretty regularly </p>
+<a href="/about">About Me</a>

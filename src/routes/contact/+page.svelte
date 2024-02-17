@@ -12,7 +12,5 @@
 
 </script>
 
-<Slides {items} />
-
 <h1>Contact</h1>
 <a href="/"> go back </a>

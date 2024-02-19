@@ -14,7 +14,7 @@
 		height:80px;
 		z-index: 100;
 		position: fixed;
-		translate: 0 -55px;
+		translate: 0 ;
 		transition: all 1s ease-in-out;
 	}
 
@@ -22,23 +22,28 @@
 		translate: 0;
 
 	}
+
+	.dynamic{
+		translate:0 -70px;
+	}
 	.unhide:hover > .hide{
 		display:inline-block;
 		margin-top: 0;
 		translate: 0;
-		transition: all 1s ease-in-out;
 		
 	}
 
 	.hide{		
-		transition: all 0.5s ease-in-out;
+		transition: all 1s ease-in-out;
 		translate: 0 -80px;
 		z-index: 100;
 		
 	}
 
 	.gone{
-		display: none;
+		opacity: 0;
+		transition: all 0.1s ease-in-out;
+
 	}
 
 	.flex{
@@ -92,13 +97,49 @@
 </style>
 <script>
 	import logo from "$lib/images/logo-ph.png";
-	let y = 0
+	let y = 0;
+	let lastY = 0;
+	
+	let dy = 0;
+	let lastDy = 0;
+
+	function getDelta(y){
+		dy = lastY - y;
+		lastY = y
+		
+		if(Math.abs(dy) <= 10){
+			
+			dy=lastDy
+			console.log('d' + lastDy)
+			console.log('d' + dy)
+			
+			return(dy)
+		}
+		else{
+			console.log(lastDy)
+			console.log(dy)
+			lastDy=dy
+			return(dy)
+			
+		
+		}
+	}
+
+	
+
+	$: dy = getDelta(y);
+	
+
+
+
+
 </script>
 
 <svelte:window bind:scrollY='{y}' />
 <!-- this is the shy header, reveals on hover and disappears when main header enters view -->
-<div class="unhide">
-<div class:gone={y<60} class="hide" >
+
+<div class="unhide" class:dynamic={dy<1}>
+<div class:gone={y<100} class:hide={dy<1} >
 	<header class="flex"> 
 		<div class="flex flex-item flex-center" style="justify-content: flex-start;">
 			<a href="/" class="nostyle">

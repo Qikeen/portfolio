@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import { Slides } from '$lib'
 	import { Footer } from '$lib'
+	import { Bio } from '$lib'
 
 
 	import { pageTitle } from '../stores.js';
@@ -42,38 +43,12 @@
 		text-align: center;
 		padding: 5vh;
 	}
-	.flex{
-		display:flex;
-		justify-content: space-around;
-		align-items: center;
-	}
-
-	.content{
-		padding:3vh;
-	}
-
-	p{
-		color:white;
-		font-family: 'Red Hat Display', sans-serif;
-		font-size: 1.2rem;
-		text-align:center;
-		padding-left: 10vw;
-		padding-right: 10vw;
-		min-width: 208px;
-	}
-	h2 { 
-		font-family:"Protest Revolution", sans-serif;
-		font-size: clamp(2rem,7vw,55px);
-		padding: 2vh;
-		margin-top: 5vh;
-
-	}
 
 </style>
 
 
 <h1> About Me </h1>
-	<div class="flex" style="background-color: slategray;"> 
+<Bio>
 		<div class="content">
 			<p>
 				 Mogul talk. It’s important to use cocoa butter. It’s the key to more success, why not live smooth? Why live rough? You see that bamboo behind me though, you see that bamboo? Ain’t nothin’ like bamboo. Bless up. You smart, you loyal, you a genius. Don’t ever play yourself. You should never complain, complaining is a weak emotion, you got life, we breathing, we blessed.
@@ -90,9 +65,10 @@
 		</div>
 	
 
-		<img src={logo} height=auto width=100% style="min-width: 140px; padding-right: 2vw;">
-	</div>
-	<Slides  items={items1} head="Tools" />
-	<Slides  items={items2} head="Programs"  />
+		<img src={logo} height=auto width=100% style="flex:1 0 300px; max-width: 400px;">
+</Bio>
+
+	<Slides --bg-color='' items={items1} head="Tools" />
+	<Slides --bg-color='' items={items2} head="Programs"  />
 	
 	<Footer />

@@ -34,7 +34,7 @@
 
 	h1{
 		font-family:"East Sea Dokdo", sans-serif;
-		font-size: clamp(2px,7vw,55px);
+		font-size: clamp(2px,6vw,55px);
 
 	}
 

@@ -1,5 +1,5 @@
 <script>
-	import { Bio } from "$lib"
+	import { Section } from "$lib"
 	import { pageTitle } from '../stores.js';
 	pageTitle.set('Contact');
 	let formName = 'contact'
@@ -64,7 +64,7 @@
 
 <h1>Contact</h1>
 
-<Bio>
+<Section>
 	<div class='content' style="flex:0 2 22%">
 		<hr />
 		<h2>Front-End Development</h2>
@@ -89,7 +89,7 @@
 		</p>
 		<hr />
 	</div>
-</Bio>
+</Section>
 
 <form  class="flex-vertical" name={formName} method="POST" netlify-honeypot="bot-field" data-netlify="true">
 <input type="hidden" name="form-name" value={formName} />

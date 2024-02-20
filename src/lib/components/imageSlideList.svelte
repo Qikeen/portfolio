@@ -6,6 +6,7 @@
 	
 	export let items = [];
 	export let head = '[title goes here]'
+	
 </script>
 
 

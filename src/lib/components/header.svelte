@@ -1,24 +1,23 @@
 
 <style>
 /* dynamic css styling for shy, headroom style header */
+	
+
 	.unhide{		
+		position: fixed;
+		padding-bottom: 10px;
 		height:80px;
 		z-index: 100;
-		position: fixed;
-		translate: 0 ;
-		transition: all 200ms ease-out;
+		transition: all 500ms;
 	
 	}
 
 	.unhide:hover{
-		translate: 0;
+		translate: 0 ;
 
 	}
 
-	.dynamic{
-		translate:0 -70px;
-
-	}
+	
 	.unhide:hover > .hide{
 		display:inline-block;
 		margin-top: 0;
@@ -33,16 +32,6 @@
 		
 	}
 
-	.invisible{
-		opacity: 0;
-		transition: all 100ms ease-in-out;
-
-	}
-
-	.gone{
-		opacity: 0;
-		display:none;
-	}
 
 
 /* flex styling */
@@ -114,9 +103,11 @@
 	import logo from "$lib/images/logo-ph.png";
 	let y = 0;
 	let lastY = 0;
-	let threshold = 5;
+	let threshold = 3;
 	let dy = 0;
 	let lastDy = 0;
+	let atTop = true
+
 
 //hide or show the header on upwards scrollY 
 	function getDelta(y){
@@ -124,6 +115,13 @@
 		dy = lastY - y;
 		//update lastY
 		lastY = y
+
+		//check if at the top 
+		if(y<65){
+			atTop = true
+		}else{
+			atTop = false
+		}
 		
 		//update dy if the change between y and lastY is greater than threshold
 		if(Math.abs(dy) <= threshold){
@@ -150,10 +148,10 @@
 <!-- bind scrollY to the value of y -->
 <svelte:window bind:scrollY='{y}' />
 
-<!-- this is the shy header, reveals on hover and disappears when main header enters view -->
+<!-- this is the shy header, reveals on hover and scroll, and sticks to the top of the page-->
 
-<div class="unhide" class:dynamic={dy<threshold}>
-<div class:invisible={y<100} class:gone={y<65} class:hide={dy<threshold} >
+<div class="unhide" class:hide={dy<threshold & !atTop}>
+<div class:hide={dy<threshold & !atTop} >
 	<header class="flex"> 
 		<div class="flex flex-item flex-center" style="justify-content: flex-start;">
 			<a href="/" class="nostyle">
@@ -179,25 +177,5 @@
 </div>
 </div>
 
-<!-- main header-->
-	<header class="flex"> 
-		<div class="flex flex-item flex-center" style="justify-content: flex-start;">
-			<a href="/" class="nostyle">
-				<img src={logo} 
-				style="padding: 5px;"
-				width=36px height=36px>
-				</a>
-			<a href="/" class="nostyle" style="font-size: clamp(2px,8vw,55px); font-family:'East Sea Dokdo', sans-serif;">Rainn.ee</a>
-		</div>
-		
-		<div class="flex-item"><!--blank div for spacing --></div>
-		<nav class="flex-item" style = "padding-right: 1vw;">	
-			<ul class="flex flex-item flex-center" style="padding:5px; justify-content: space-between;">
-			
-				<a href="/about">About</a>
-				<a href="/contact">Contact</a>
-				<a href="/projects">Projects</a>
-				<a href="/resume">Resume</a>
-			</ul>
-		</nav>
-	</header>
+<!--add a blank header for spacing -->
+<header />

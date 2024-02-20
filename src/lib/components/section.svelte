@@ -13,6 +13,9 @@
 		
 	}
 
+
+
+
 	.flex :global(.content){
 		padding:2vw;
 		flex:2 0 50%;
@@ -26,7 +29,7 @@
 	}
 
 </style>
-
+	
 	<div class="flex"> 
 		<slot />
 	</div>

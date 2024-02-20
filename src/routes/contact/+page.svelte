@@ -76,9 +76,7 @@
   id="test"
   name="test"
   on:submit|preventDefault={handleSubmit}
-  netlify
-  netlify-honeypot="bot-field"
->
+  netlify>
   <input type="hidden" name="form-name" value="test" />
   <input type="text" name="bot-field" style="opacity: 0" />
   <p>

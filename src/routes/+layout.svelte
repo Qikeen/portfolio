@@ -1,4 +1,5 @@
 <script>
+	import {Footer} from '$lib'
 	import {pageTitle} from './stores.js'
 	import {Header} from "$lib"
 
@@ -7,10 +8,7 @@
 <svelte:head>
 	<title> {$pageTitle} &#9865 Rainn.ee </title>
 </svelte:head>
+
 <Header />
-
-
-
-
-
 <slot />
+<Footer />

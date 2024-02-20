@@ -2,29 +2,7 @@
 	import { Bio } from "$lib"
 	import { pageTitle } from '../stores.js';
 	pageTitle.set('Contact');
-
-  let isSubmitting = false;
-
-  const handleSubmit = (e) => {
-    let myForm = document.getElementById("test");
-    let formData = new FormData(myForm);
-    isSubmitting = true;
-    return fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => {
-        console.log("Form successfully submitted");
-        isSubmitting = false;
-        myForm.reset();
-      })
-      .catch((error) => {
-        alert(error);
-        isSubmitting = false;
-      });
-  };
-
+	let formName = 'contact'
 
 </script>
 <style>
@@ -42,6 +20,46 @@
 		color:white;
 
 	}
+
+	.flex-vertical{
+		display: flex;
+		flex-direction: column;
+		margin: 5vh 10vw;
+		border-radius: 1vw;
+		align-items: center;
+		background-color: slategray;
+	}
+
+	.flex-vertical > *{
+		margin-left:1vw;
+		margin-right:1vw;
+		margin-top: 0.5vh;
+		width:75%;
+
+	}
+	.flex-vertical > label{
+		font-family: 'East Sea Dokdo', sans-serif;
+		font-size: clamp(1rem,6vw,45px);
+		margin-top: 2vh;
+		color: white;
+	}
+	.flex-vertical > .button{
+		align-self: flex-end;
+		margin: 2vw;
+		margin-bottom: 1vw;
+		max-width: 100px;
+	}
+
+	.flex-vertical > h2{
+		font-family: 'East Sea Dokdo', sans-serif;
+		font-size: clamp(1.2rem,6vw,60px);
+	}
+
+	.flex-vertical > textarea{
+		font-size: 0.8rem;
+		resize: vertical;
+	}
+
 </style>
 
 <h1>Contact</h1>
@@ -73,15 +91,16 @@
 	</div>
 </Bio>
 
-<form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-  <input type="hidden" name="form-name" value="contact" />
-  <label for="name">Name</label>
-  <input name="name" id="name" required placeholder="Name" type="text" />
-  <label for="email">Email</label>
-  <input name="email" id="email" required placeholder="Email" type="email" />
-  <label for="message">Message</label>
-  <input name="message" id="message" required placeholder="Message" type="text" />
-  <input type="submit" value="Submit" />
-</form>
+<form  class="flex-vertical" name={formName} method="POST" netlify-honeypot="bot-field" data-netlify="true">
+<input type="hidden" name="form-name" value={formName} />
 
-<a href="/"> go back </a>
+	<h2>Leave Me A Message</h2>
+ 
+	<label for="name">Name</label>
+	<input name="name" id="name" required placeholder="Name" type="text" />
+ 	<label for="email">Email</label>
+ 	<input name="email" id="email" required placeholder="Email" type="email" />
+ 	<label for="message">Message</label>
+ 	<textarea name="message" id="message" placeholder="Message" rows=10 required type="text"></textarea>
+ 	<input class="button" type="submit" value="Submit" />
+</form>

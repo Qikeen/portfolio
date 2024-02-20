@@ -49,7 +49,7 @@
 
 <h1> About Me </h1>
 <Bio>
-		<div class="content">
+			<div class="content">
 			<p>
 				 Mogul talk. It’s important to use cocoa butter. It’s the key to more success, why not live smooth? Why live rough? You see that bamboo behind me though, you see that bamboo? Ain’t nothin’ like bamboo. Bless up. You smart, you loyal, you a genius. Don’t ever play yourself. You should never complain, complaining is a weak emotion, you got life, we breathing, we blessed.
 			</p>
@@ -66,9 +66,9 @@
 	
 
 		<img src={logo} height=auto width=100% style="flex:1 0 300px; max-width: 400px;">
+
 </Bio>
 
 	<Slides --bg-color='' items={items1} head="Tools" />
 	<Slides --bg-color='' items={items2} head="Programs"  />
 	
-	<Footer />

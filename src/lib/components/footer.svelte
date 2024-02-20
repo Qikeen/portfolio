@@ -9,5 +9,5 @@
 </style>
 
 <div>
- &copy; Rainn.ee 2024	
+ <p>&copy; Rainn.ee 2024</p>	
 </div>

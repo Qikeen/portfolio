@@ -32,7 +32,7 @@
 
 
 
-	<h2> {head}</h2>
+	<h2> {head} </h2>
 
 		<ul class='' style="background-color: [bgColor]">
 

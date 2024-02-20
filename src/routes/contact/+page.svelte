@@ -72,30 +72,6 @@
 		<hr />
 	</div>
 </Bio>
-<form
-  id="test"
-  name="test"
-  on:submit|preventDefault={handleSubmit}
-  netlify>
-  <input type="hidden" name="form-name" value="test" />
-  <input type="text" name="bot-field" style="opacity: 0" />
-  <p>
-    <label>Your Name: <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message" /></label>
-  </p>
-  <p>
-    {#if isSubmitting}
-      <div>Submitting</div>
-    {:else}
-      <button type="submit">Send</button>
-    {/if}
-  </p>
-</form>
 
 <form name="netlify-form-example" method="POST" netlify-honeypot="bot-field" data-netlify="true">
   <input type="hidden" name="form-name" value="netlify-form-example" />

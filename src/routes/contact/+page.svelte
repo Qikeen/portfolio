@@ -73,8 +73,8 @@
 	</div>
 </Bio>
 
-<form name="netlify-form-example" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-  <input type="hidden" name="form-name" value="netlify-form-example" />
+<form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact" />
   <label for="name">Name</label>
   <input name="name" id="name" required placeholder="Name" type="text" />
   <label for="email">Email</label>

@@ -52,23 +52,23 @@
 </Section>
 
 <Section>
-	<div class="content" style=" flex:1 0 300px;">
+	<div class="content" style=" flex:1 0 300px; align-self: stretch;">
 		<h2>Education</h2>
 		<p style="text-align: left; font-size:clamp(1.2rem, 1vw, 2vw);">
 		Current &bull; MOOC - Cyber Security Base &bull; <b> University of Helsinki </b>
 		<hr  />
 		<p style="text-align: left; font-size:clamp(1.2rem, 1vw, 2vw);">
-		2023 &bull; Multimedia Technology - Animator Level II  &bull; <b> Dallas College </b>
+		2022-2023 &bull; Multimedia Technology - Animator Level II  &bull; <b> Dallas College </b>
 		<hr />
 		<p style="text-align: left; font-size:clamp(1.2rem, 1vw, 2vw);">
-		2021 &bull; 2.5 Years of study towards BA in Arts, Technology and Emerging Communication   &bull; <b> University of Texas at Dallas </b>
+		2019-2021 &bull; 2.5 Years of study towards BA in Arts, Technology and Emerging Communication   &bull; <b> University of Texas at Dallas </b>
 		<hr />
 		<p style="text-align: left; font-size:clamp(1.2rem, 1vw, 2vw);">
 		2019 &bull; AA Graphic Design & Digital Illustration  &bull; <b> Richland College </b>
 		<hr />
 		
 	</div>
-	<div class="content" style="flex:1 0 300px;">
+	<div class="content" style="flex:1 0 300px; align-self: stretch;">
 		<h2>Work</h2>
 		<p style="text-align: left; font-size:clamp(1.2rem, 1vw, 2vw);">
 		Current &bull; Freelance Web Designer (Looking for work lol) 

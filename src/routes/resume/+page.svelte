@@ -52,7 +52,7 @@
 </Section>
 
 <Section>
-	<div class="content" style=" flex:1 0 300px; order:-1;">
+	<div class="content" style=" flex:1 0 300px;">
 		<h2>Education</h2>
 		<p style="text-align: left; font-size:clamp(1.2rem, 1vw, 2vw);">
 		Current &bull; MOOC - Cyber Security Base &bull; <b> University of Helsinki </b>
@@ -68,7 +68,7 @@
 		<hr />
 		
 	</div>
-	<div class="content" style="flex:1 0 300px; height:100%;">
+	<div class="content" style="flex:1 0 300px;">
 		<h2>Work</h2>
 		<p style="text-align: left; font-size:clamp(1.2rem, 1vw, 2vw);">
 		Current &bull; Freelance Web Designer (Looking for work lol) 

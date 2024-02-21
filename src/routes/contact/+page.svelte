@@ -83,7 +83,7 @@
 	</div>
 	<div class='content' style="flex:0 2 22%;">
 		<hr />
-		<h2>Graphic Design/Digital Illustration</h2>
+		<h2>Graphic Design/ Digital Illustration</h2>
 		<hr />
 		<p>Graphic design and digital illustration services for any industry.
 		</p>

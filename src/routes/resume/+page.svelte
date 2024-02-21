@@ -51,7 +51,7 @@
 	</div>
 </Section>
 
-<Section separator=true>
+<Section>
 	<div class="content" style=" flex:1 0 300px; order:-1;">
 		<h2>Education</h2>
 		<p style="text-align: left; font-size:clamp(1.2rem, 1vw, 2vw);">
